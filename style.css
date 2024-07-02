@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    font-size: 17px;
+    /* color: white; */
+    color: #333;
+}
+:root{
+    --color:orangered;
+}
+button{
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color);
+    box-shadow: 5px 5px 0 -1px #373737;
+    width: fit-content;
+    transition: all ease-in-out .5s;
+}
+button:hover{
+    background-color: #373737;
+    box-shadow: 5px 5px 0 -1px var(--color);
+}
+button a{
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+.container{
+    width: 100%;
+    height: 100%;
+
+}
+.container .header{
+    width: 100%;
+    background-color:white;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    position: fixed;
+    z-index: 10;
+    background-color: transparent;
+    align-items: center;
+    
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    padding-bottom: 5px;
+}
+nav ul li a{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding: 5px 5px;
+}
+nav ul li::before{
+    position: absolute;
+    content:" ";
+    width: 0;
+    height: 3px;
+    background-color: var(--color);
+    bottom: 0;
+    transition: .4S all ease-in-out;
+}
+nav ul li:hover::before{
+    width: 100%;
+
+}
+nav .logo a,nav.logo i{
+    font-size: 1.6rem;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+
+}
+nav .toggle{
+    display: none;
+}
+.main{
+    min-width: 700px;
+    width: 100%;
+    padding-top:100px ;
+    padding-bottom: 5%;
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.main .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main .content h4{
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    word-spacing: 5px
+}
+.main .content h1,.main .content h1 .auto-input{
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+
+}
+.main .content p{
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 5px;
+
+}
+.main.content button a{
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.main .image{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    top:10px;
+}
+.main .image:hover{
+ transform: translateY(-20px);
+ transition: all 2s ease-in-out;
+}
+.main .image img{
+    height: 60%;
+    width: 60%;
+    z-index: 9;
+    border-radius: 50%;
+}
+.main .image .square{
+    position: absolute;
+    height: 600px;
+    width: 900px;
+    background-color:rgba(254,196,72,0.4);
+    transform: rotate(-123deg);
+    border-radius: 50px;
+    left: 45%;
+    bottom: 10%;
+}
+.about-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: orangered;
+    text-shadow: 3px 3px  #373737 ;
+
+}
+.about{
+    width: 100%;
+    min-width: 700px;
+    min-height: 700px;
+    display:flex;
+    padding: 5% 15%;
+    align-items: center;
+    gap: 4%;
+}
+.about img{
+    display: flex;
+    width: 350px;
+    height: 350px;
+    margin-left: 100px;
+    border-radius: 20px;
+}
+.about .content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+    flex: 100%;
+}
+.about .content h2{
+    font-size: 2rem;
+    letter-spacing: 1px;
+
+}
+.about .project-client {
+    display: flex;
+    gap: 10px;
+    width:100%;
+}
+.about .project-client h4{
+    font-size:15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about .project-client span{
+    font-size: 27px;
+    font-weight: bolder;
+    display: block;
+    color: var(--color);
+}
+.about .content .buttons{
+    display: flex;
+    gap: 5%;
+    width: 100%;   
+}
+/* .about .content .buttons button:last-child{
+    background-color: #373737;
+}
+.about .content .buttons button:last-child:hover{
+    background-color: var(--color);
+} */
+
+
+@media(max-width:1220px){
+    nav{
+        padding: 0 5%;
+
+    }
+    nav ul li{
+        margin: 0 5px;
+    }
+    .main{
+        padding: 5%;
+    }
+    .main .content h1,.main .content h1 .auto-input{
+        font-size: 2rem;
+        padding: 0;
+    }
+    .about{
+        padding: 5%;
+    }
+    .about h2{
+        font-size: 1rem;
+    }
+}
+/* 
+
+
+
+
+*/
+
+@media(max-width:900px){
+    nav .toggle{
+        display: block;
+    }
+    nav .toggle i{
+        font-size: 25px;
+    }
+    nav ul{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: rgb(57,5,55)1.5px solid;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        display: none;
+        z-index: 99;
+    }
+    nav ul li{
+        display: block;
+        line-height: 50px;
+        border: lid #aaa6a6;
+        margin: 0;
+        padding-left: 30px;
+    }
+    nav ul li::before{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+    .download_cv{
+        display: none;
+    }
+    .main{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .main .content{
+        padding-top: 80px;
+        align-items: center;
+        z-index: 99;
+        
+    }
+    .main .content h1,.main .content h1 .auto-input{
+        font-size: 2rem;
+    }
+    .main .image{
+        justify-content: center;
+    }
+    .about{
+        padding: 15% 5%;
+        flex-direction: column;
+    }
+    .about .image{
+        width: 300px;
+        height: 300px;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+   
+}
+@media(max-width:650px){
+    .main{
+        min-width: 400px;
+        width: 100%;
+        padding-top:100px ;
+        padding-bottom: 5%;
+        padding: 5%;
+        
+    }
+    
+    .main .image{
+        width: 300px;
+        height: 300px;
+        justify-content: center;
+    }
+    .about{
+        padding: 5% 1%;
+        flex-direction: column;
+        
+    }
+   
+  }
